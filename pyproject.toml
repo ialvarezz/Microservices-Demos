@@ -1,0 +1,26 @@
+[project]
+name = "grid-hub"
+description = "Microservices for managing and monitoring GRiD services and Indicator Dashboards"
+readme = "README.md"
+version = "0.1.0"
+requires-python = ">=3.14"
+authors = [
+    {name = "Ignacio Alvarez",email = "ignacio.alvarez.barrantes@intel.com"}
+]
+dependencies = [
+]
+
+[tool.poetry]
+packages = [
+    { include = "grid_utils", from = "Utils" },
+    { include = "Codex/Backend", from = "Services" },
+    { include = "Scout/Backend", from = "Services" }
+]
+
+[tool.poetry.scripts]
+codex = "Codex.Backend.__main__:start"
+scout = "Scout.Backend.__main__:start"
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
