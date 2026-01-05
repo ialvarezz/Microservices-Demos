@@ -12,9 +12,7 @@ dependencies = [
 
 [tool.poetry]
 packages = [
-    { include = "grid_utils", from = "Utils" },
     { include = "Codex/Backend", from = "Services" },
-    { include = "Scout/Backend", from = "Services" }
 ]
 
 [tool.poetry.scripts]
